@@ -26,8 +26,8 @@ openstudioApp.controller('SystemsCtrl', ['$scope', '$log', 'os', function ($scop
       shape.graphics.beginStroke("black").moveTo(0.0,midY).lineTo(osshapes.standardUnit,midY);
 
       var bitmap = new createjs.Bitmap("images/pipe.png");
-      bitmap.x = 0.0;
-      bitmap.y = 0.0;
+      bitmap.x = 0.5;
+      bitmap.y = 0.5;
       bitmap.image.onload = function() { stage.update(); };
       container.addChild(bitmap);
 
@@ -197,7 +197,7 @@ openstudioApp.controller('SystemsCtrl', ['$scope', '$log', 'os', function ($scop
         supplyOutletBranch = osshapes.drawBranch(supplyOutletComponents); 
       }
 
-      var xpos = osshapes.margin;
+      var xpos = 0.5 + osshapes.margin;
       var ypos = 0.5 + osshapes.margin;
 
       if( supplyInletBranch ) {

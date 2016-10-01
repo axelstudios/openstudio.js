@@ -7,23 +7,32 @@
 </div>
 <div class="row">
   <div class="col-md-12">
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>Zone Name Input</th>
-          <th>Zone Name Output</th>
-          <th>Zone Multiplier</th>
-          <th>&nbsp;</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr ng-repeat="zone in zones">
-          <td><input type="text" ng-model="zone.name" /></td>
-          <td>{{zone.name}}</td>
-          <td><input type="number" pattern="\d*" ng-model="zone.multiplier" onClick="select();" /></td>
-          <td><button type="button" class="close" aria-label="Close" ng-click="removeZone(zone)"><span aria-hidden="true">&times;</span></button></td>
-        </tr>
-      </tbody>
-    </table>
+    <!--<table class="table table-striped">-->
+      <!--<thead>-->
+        <!--<tr>-->
+          <!--<th>Zone Name Input</th>-->
+          <!--<th>Zone Name Output</th>-->
+          <!--<th>Zone Multiplier</th>-->
+          <!--<th>&nbsp;</th>-->
+        <!--</tr>-->
+      <!--</thead>-->
+      <!--<tbody>-->
+        <!--<tr ng-repeat="zone in zones">-->
+          <!--<td><input type="text" ng-model="zone.name" /></td>-->
+          <!--<td>{{zone.name}}</td>-->
+          <!--<td><input type="number" pattern="\d*" ng-model="zone.multiplier" onClick="select();" /></td>-->
+          <!--<td><button type="button" class="close" aria-label="Close" ng-click="removeZone(zone)"><span aria-hidden="true">&times;</span></button></td>-->
+        <!--</tr>-->
+      <!--</tbody>-->
+    <!--</table>-->
+    <treecontrol class="tree-classic col-md-3"
+                 tree-model="zones"
+                 options="treeOptions"
+                 on-selection="showSelected(node)"
+                 selected-node="node1">{{node.name}}
+    </treecontrol>
+    <div class="col-md-9">
+      <div ui-grid="gridOptions" ui-grid-edit class="myGrid" style="width:100%;"></div>
+    </div>
   </div>
 </div>

@@ -15,9 +15,10 @@
     "angular-ui-router.stateHelper": "latest",
     "bootstrap": "~3.3.7",
     "easeljs": "~0.8.2",
-    "lodash": "~4.16.2"
+    "lodash": "~4.16.2",
+    "angular-tree-control": "^0.2.28"
   },
   "resolutions": {
-    "angular": "~1.5.8"
+    "angular": "1.5.8"
   }
 }

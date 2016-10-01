@@ -2,8 +2,10 @@
 
 var openstudioApp = angular.module('openstudioApp', [
   'ngAnimate',
+  'ui.grid', 'ui.grid.edit',
   'ui.router', 'ui.router.stateHelper',
-  'ui.bootstrap']);
+  'ui.bootstrap',
+  'treeControl']);
 
 openstudioApp.config(['$logProvider', '$urlRouterProvider', 'stateHelperProvider', function ($logProvider, $urlRouterProvider, stateHelperProvider) {
   $urlRouterProvider.when('', '/zones').otherwise('/zones');
@@ -23,7 +25,7 @@ openstudioApp.config(['$logProvider', '$urlRouterProvider', 'stateHelperProvider
     });
 }]);
 
-openstudioApp.run(['$rootScope', '$log', 'Shared', function ($rootScope, $log, Shared) {
+openstudioApp.run(['$rootScope', '$log', 'Shared', 'os', function ($rootScope, $log, Shared, os) {
   $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
     //$log.debug('Changing state', toState);
   });
@@ -39,4 +41,11 @@ openstudioApp.run(['$rootScope', '$log', 'Shared', function ($rootScope, $log, S
 }]);
 
 // For debugging, call bootlint()
-var bootlint = (function(){var s=document.createElement("script");s.onload=function(){bootlint.showLintReportForCurrentDocument([]);};s.src="https://maxcdn.bootstrapcdn.com/bootlint/latest/bootlint.min.js";document.body.appendChild(s)});
+var bootlint = (function () {
+  var s = document.createElement("script");
+  s.onload = function () {
+    bootlint.showLintReportForCurrentDocument([]);
+  };
+  s.src = "https://maxcdn.bootstrapcdn.com/bootlint/latest/bootlint.min.js";
+  document.body.appendChild(s)
+});

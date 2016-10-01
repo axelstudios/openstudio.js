@@ -6,14 +6,18 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "angular": "latest",
-    "angular-animate": "latest",
-    "angular-bootstrap": "latest",
-    "angular-spinner": "latest",
+    "angular": "~1.5.8",
+    "angular-animate": "~1.5.8",
+    "angular-bootstrap": "~2.1.4",
+    "angular-spinner": "~0.8.1",
+    "angular-ui-grid": "~3.2.1",
     "angular-ui-router": "latest",
     "angular-ui-router.stateHelper": "latest",
-    "bootstrap": "latest",
-    "easeljs": "latest",
-    "lodash": "latest"
+    "bootstrap": "~3.3.7",
+    "easeljs": "~0.8.2",
+    "lodash": "~4.16.2"
+  },
+  "resolutions": {
+    "angular": "~1.5.8"
   }
 }

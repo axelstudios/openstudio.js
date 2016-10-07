@@ -3,7 +3,7 @@
   "version"      : "0.1.0",
   "main"         : "main.js",
   "dependencies" : { 
-    "node-gyp" : "latest",
-    "electron-prebuilt" : "latest"
+    "node-gyp" : "3.3.0",
+    "electron-prebuilt" : "0.28.2"
   }
 }
